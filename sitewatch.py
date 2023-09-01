@@ -51,18 +51,37 @@ def compare(domain, oldhash, newhash):
         return True
     return False
 
+def datafromfile(filename):
+    try:
+        with open(filename, 'r') as file:
+            try:
+                data = json.load(file)
+                domain_list = data.get("domains", [])
+                for domain_entry in domain_list:
+                    for domain, hashes in domain_entry.items():
+                        print(f"Domain: {domain}")
+                        print(f"Hashes:{hashes}")
+            except json.decoder.JSONDecodeError:
+                print("The file is empty or not valid JSON.")
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="simple code to watch for sites changing")
     parser.add_argument("--domain", help="The domain name to process")
-
+    filename = 'domains.json'
     args = parser.parse_args()
-    domain = 'https://' + args.domain
-    if domain:
+
+
+    if args.domain:
+        domain = 'https://' + args.domain
         hash = gethash(domain)
-        addtofile('domains.json', domain, hash )
+        addtofile(filename, domain, hash )
     else:
-        print('no domain given')
-    # print(hash)
+        datafromfile(filename)
+   
 
 
 if __name__ == "__main__":
