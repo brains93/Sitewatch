@@ -6,6 +6,7 @@ import json
 def gethash(domain):
     #pulls down HTML of site and hashs it
     try:
+        # needs input sanitization here 
         r = requests.get(domain)
     except:
         raise Exception(f"could not access site status code was {r.status_code}")
@@ -38,16 +39,13 @@ def addtofile(filename, domain, hash):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-
-
-
 def compare(domain, oldhash, newhash):
     '''
     returns true if the site has change or false if it has not
     '''
     sim = ppdeep.compare(oldhash, newhash)
 
-    if sim >= 50:
+    if sim <= 50:
         return True
     return False
 
