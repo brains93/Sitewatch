@@ -39,12 +39,11 @@ def addtofile(filename, domain, hash):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-def compare(domain, oldhash, newhash):
+def compare(oldhash, newhash):
     '''
     returns true if the site has change or false if it has not
     '''
     sim = ppdeep.compare(oldhash, newhash)
-
     if sim <= 50:
         return True
     return False
@@ -55,10 +54,7 @@ def datafromfile(filename):
             try:
                 data = json.load(file)
                 domain_list = data.get("domains", [])
-                for domain_entry in domain_list:
-                    for domain, hashes in domain_entry.items():
-                        print(f"Domain: {domain}")
-                        print(f"Hashes:{hashes}")
+                return domain_list
             except json.decoder.JSONDecodeError:
                 print("The file is empty or not valid JSON.")
 
@@ -67,6 +63,7 @@ def datafromfile(filename):
 
 
 def main():
+    
     parser = argparse.ArgumentParser(description="simple code to watch for sites changing")
     parser.add_argument("--domain", help="The domain name to process")
     filename = 'domains.json'
@@ -78,9 +75,14 @@ def main():
         hash = gethash(domain)
         addtofile(filename, domain, hash )
     else:
-        datafromfile(filename)
+        domain_list = datafromfile(filename)
+        for domain_entry in domain_list:
+                    for domain, hashes in domain_entry.items():
+                        oldhash = hashes
+                        newhash = gethash(domain)
+                        if compare(oldhash, newhash):
+                            print(f"{domain} has changed")
    
-
 
 if __name__ == "__main__":
     main()
