@@ -12,3 +12,54 @@
 2023-09-03 08:00:01,083 hash of https://steampowered.com: 12288:ghCcFKT6J86Da1zmnMPQ7qXNiO4GDFAnKi/2YaN5m8EhDgFckSDec41h5m1GiDVv:gRHpCa
 2023-09-03 08:00:01,084 sim of hash is 71
 2023-09-03 08:00:01,084 loop compleate waiting
+2023-09-03 08:58:57,802 No domain provided, starting loop
+2023-09-03 08:59:00,162 request for https://amazon.com status code was 503
+2023-09-03 08:59:00,165 hash of https://amazon.com: 48:UvFM9y1tE8nS5gquHDRXxTihvxpGH0HJ1HXE0SVB7nUo9mePp4X:UvTtSehX+8U7RS5gsk
+2023-09-03 08:59:00,165 sim of hash is 100
+2023-09-03 08:59:00,549 request for https://google.com status code was 200
+2023-09-03 08:59:00,567 hash of https://google.com: 384:sYkpDpmReVoOs4ALclKjGFyE7hbhhbEbu7dgN2weIdBJCBXQL:qpBVoOs40cISFX9hbagd3mJQQL
+2023-09-03 08:59:00,568 sim of hash is 90
+2023-09-03 08:59:06,010 request for https://steampowered.com status code was 200
+2023-09-03 08:59:06,219 hash of https://steampowered.com: 12288:lPZf4dEFRO0yJIwHorNqy1ixLZoyvKD0TZC7tHAYTYiPBTM5CUgXQsss24QWq025:l63xB
+2023-09-03 08:59:06,220 sim of hash is 0
+2023-09-03 08:59:38,939 No domain provided, starting loop
+2023-09-03 08:59:39,781 request for https://amazon.com status code was 503
+2023-09-03 08:59:39,784 hash of https://amazon.com: 48:UvFM9y1tE8nS5gquHDRXxTihvxpGH0HJ1HXE0SVB7nUo9mePp4X:UvTtSehX+8U7RS5gsk
+2023-09-03 08:59:39,784 sim of hash is 100
+2023-09-03 08:59:40,168 request for https://google.com status code was 200
+2023-09-03 08:59:40,185 hash of https://google.com: 384:QvDpmReVoOs4nLclKjGFy/7hbhhbF1XY72rN2weEUBJCBXQL:UBVoOs4LcISFk9hbTXW2AtJQQL
+2023-09-03 08:59:40,186 sim of hash is 86
+2023-09-03 08:59:41,122 request for https://steampowered.com status code was 200
+2023-09-03 08:59:41,324 hash of https://steampowered.com: 12288:QsZf4dEFRO0yJIwHorNqy1ixLZoyvKD0TZC7tHAYTYiPBTM5CUgXQsss24QWq025:QR3xB
+2023-09-03 08:59:41,325 sim of hash is 0
+2023-09-03 08:59:57,900 No domain provided, starting loop
+2023-09-03 08:59:58,749 request for https://amazon.com status code was 503
+2023-09-03 08:59:58,753 hash of https://amazon.com: 48:UvFM9y1tE8nS5gquHDRXxTihvxpGH0HJ1HXE0SVB7nUo9mePp4X:UvTtSehX+8U7RS5gsk
+2023-09-03 08:59:58,754 sim of hash is 100
+2023-09-03 08:59:59,254 request for https://google.com status code was 200
+2023-09-03 08:59:59,272 hash of https://google.com: 384:IJDpmReVoOs4wLclKjGFyE7hbhhbMbs7RgN2weIHBJCBXQL:IJBVoOs4EcISFz9hbmaR30JQQL
+2023-09-03 08:59:59,273 sim of hash is 88
+2023-09-03 09:00:00,078 request for https://steampowered.com status code was 200
+2023-09-03 09:00:00,289 hash of https://steampowered.com: 12288:GmZf4dEFRO0yJIwHorNqy1ixLZoyvKD0TZC7tHAYTYiPBTM5CUgXQsss24QWq025:GP3xB
+2023-09-03 09:00:00,290 sim of hash is 0
+2023-09-03 09:00:00,290 https://steampowered.com has changed
+2023-09-03 09:00:01,775 request for https://steampowered.com status code was 200
+2023-09-03 09:00:01,983 hash of https://steampowered.com: 12288:GNZf4dEFRO0yJIwHorNqy1ixLZoyvKD0TZC7tHAYTYiPBTM5CUgXQsss24QWq025:G83xB
+2023-09-03 09:00:01,983 sim of hash is 0
+2023-09-03 09:00:01,983 https://steampowered.com has changed
+2023-09-03 09:00:01,983 loop compleate waiting
+2023-09-03 09:01:02,799 request for https://amazon.com status code was 503
+2023-09-03 09:01:02,803 hash of https://amazon.com: 48:UvFM9y1tE8nS5gquHDRXxTihvxpGH0HJ1HXE0SVB7nUo9mePp4X:UvTtSehX+8U7RS5gsk
+2023-09-03 09:01:02,803 sim of hash is 100
+2023-09-03 09:01:03,214 request for https://google.com status code was 200
+2023-09-03 09:01:03,231 hash of https://google.com: 384:MNDpmReVoOs4xLclKjGFy17hbhhbbQNR7OrN2weEuBJCBXQL:UBVoOs4tcISFu9hbMNhOAnJQQL
+2023-09-03 09:01:03,232 sim of hash is 86
+2023-09-03 09:01:05,527 request for https://steampowered.com status code was 200
+2023-09-03 09:01:05,736 hash of https://steampowered.com: 12288:G2Zf4dEFRO0yJIwHorNqy1ixLZoyvKD0TZC7tHAYTYiPBTM5CUgXQsss24QWq025:Gf3xB
+2023-09-03 09:01:05,736 sim of hash is 0
+2023-09-03 09:01:05,736 https://steampowered.com has changed
+2023-09-03 09:01:06,504 request for https://steampowered.com status code was 200
+2023-09-03 09:01:06,694 hash of https://steampowered.com: 12288:GFZf4dEFRO0yJIwHorNqy1ixLZoyvKD0TZC7tHAYTYiPBTM5CUgXQsss24QWq025:G03xB
+2023-09-03 09:01:06,694 sim of hash is 0
+2023-09-03 09:01:06,694 https://steampowered.com has changed
+2023-09-03 09:01:06,694 loop compleate waiting

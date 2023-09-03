@@ -77,7 +77,7 @@ def main():
 
 
     if args.domain:
-        logging.INFO(f'domain provided, adding {args.domain} to file')
+        logging.info(f'domain provided, adding {args.domain} to file')
         domain = 'https://' + args.domain
         hash = gethash(domain)
         addtofile(filename, domain, hash )
@@ -93,7 +93,7 @@ def main():
                             if compare(oldhash, newhash):
                                 #can configure logger to print to stdout as well to file but found its messy 
                                 print(f"{domain} has changed")
-                                logging.INFO(f'{domain} has changed')
+                                logging.info(f'{domain} has changed')
             logging.info('loop compleate waiting')
             time.sleep(60)
             

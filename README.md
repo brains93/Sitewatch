@@ -32,3 +32,4 @@ if a site has changed you will see this output. if no changes are detected there
 
 * Add functionality to tie in with SOAR or other automation tools
 * email functionality to notifiy when somthing changes
+* Functionality to update hash on list if it has changed
