@@ -1,2 +1,2 @@
-ppdeep
-requests
+ppdeep==20200505
+requests==2.28.2

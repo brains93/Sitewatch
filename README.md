@@ -24,7 +24,7 @@ To check the list to see if any sites have changed, run the script with no input
 ```
 sitewatch.py
 ```
-if a site has changed you will see this output. if no changes are detected there will be no output. 
+if a site has changed you will see this output. if no changes are detected there will be no stdoutput but it will log to the logfile. 
 
 ![Alt text](image.png)
 
