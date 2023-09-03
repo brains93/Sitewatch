@@ -5,6 +5,12 @@
         },
         {
             "https://google.com": "384:53F1DpmReVoOs4OLclKjGFyz7hbhhbJ2G7QN2weIgBJCBXQL:ZBVoOs46cISF49hbYYHtJQQL"
+        },
+        {
+            "https://steampowered.com": "12288:g3CcFKu+9LnT8huMpIVcmAx4ZqOpyxTLKi/2YaN5m8EhDgFckSUlY4dI6u1tnPV8:gMrUD4L"
+        },
+        {
+            "https://steampowered.com": "12288:7QCcFKu+9LnT8huMpIVcmAx4ZqOpyxTLKi/2YaN5m8EhDgFckSUlY4dI6u1tnPV8:7HrUD4L"
         }
     ]
 }

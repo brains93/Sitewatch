@@ -2,15 +2,19 @@ import argparse
 import requests
 import ppdeep
 import json
+import time
+import logging
 
 def gethash(domain):
     #pulls down HTML of site and hashs it
     try:
         # needs input sanitization here 
         r = requests.get(domain)
-    except:
-        raise Exception(f"could not access site status code was {r.status_code}")
+        logging.info(f'request for {domain} status code was {r.status_code}')
+    except Exception:
+        logging.error(f"could not access site status code was {r.status_code}")
     hash = ppdeep.hash(r.text)
+    logging.info(f'hash of {domain}: {hash}')
     return hash
 
 def addtofile(filename, domain, hash):
@@ -37,13 +41,14 @@ def addtofile(filename, domain, hash):
             json.dump(data, file, indent=4)
     
     except Exception as e:
-        print(f"An error occurred: {e}")
+        logging.error(f"An error occurred: {e}")
 
 def compare(oldhash, newhash):
     '''
     returns true if the site has change or false if it has not
     '''
     sim = ppdeep.compare(oldhash, newhash)
+    logging.info(f'sim of hash is {sim}')
     if sim <= 50:
         return True
     return False
@@ -54,16 +59,17 @@ def datafromfile(filename):
             try:
                 data = json.load(file)
                 domain_list = data.get("domains", [])
+                logging.debug(f'domain list is :{domain_list}')
                 return domain_list
             except json.decoder.JSONDecodeError:
-                print("The file is empty or not valid JSON.")
+                logging.error("The file is empty or not valid JSON.")
 
     except Exception as e:
-        print(f"An error occurred: {e}")
+        logging.error(f"An error occurred: {e}")
 
 
 def main():
-    
+    logging.basicConfig(filename='sitewatch.log', encoding='utf-8', level=logging.INFO, format='%(asctime)s %(message)s')
     parser = argparse.ArgumentParser(description="simple code to watch for sites changing")
     parser.add_argument("--domain", help="The domain name to process")
     filename = 'domains.json'
@@ -71,18 +77,26 @@ def main():
 
 
     if args.domain:
+        logging.INFO(f'domain provided, adding {args.domain} to file')
         domain = 'https://' + args.domain
         hash = gethash(domain)
         addtofile(filename, domain, hash )
     else:
-        domain_list = datafromfile(filename)
-        for domain_entry in domain_list:
-                    for domain, hashes in domain_entry.items():
-                        oldhash = hashes
-                        newhash = gethash(domain)
-                        if compare(oldhash, newhash):
-                            print(f"{domain} has changed")
-   
+        logging.info('No domain provided, starting loop')
+
+        while True:
+            domain_list = datafromfile(filename)
+            for domain_entry in domain_list:
+                        for domain, hashes in domain_entry.items():
+                            oldhash = hashes
+                            newhash = gethash(domain)
+                            if compare(oldhash, newhash):
+                                #can configure logger to print to stdout as well to file but found its messy 
+                                print(f"{domain} has changed")
+                                logging.INFO(f'{domain} has changed')
+            logging.info('loop compleate waiting')
+            time.sleep(60)
+            
 
 if __name__ == "__main__":
     main()

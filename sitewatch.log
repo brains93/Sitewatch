@@ -1,0 +1,14 @@
+2023-09-03 07:59:55,106 No domain provided, starting loop
+2023-09-03 07:59:55,907 request for https://amazon.com status code was 503
+2023-09-03 07:59:55,910 hash of https://amazon.com: 48:UvFM9y1tE8nS5gquHDRXxTihvxpGH0HJ1HXE0SVB7nUo9mePp4X:UvTtSehX+8U7RS5gsk
+2023-09-03 07:59:55,910 sim of hash is 100
+2023-09-03 07:59:56,422 request for https://google.com status code was 200
+2023-09-03 07:59:56,437 hash of https://google.com: 384:Y+DpmReVoOs4YLclKjGFyE7hbhhb0OC7VgN2weIQBJCBXQL:Y+BVoOs4McISFH9hb7EV3JJQQL
+2023-09-03 07:59:56,438 sim of hash is 88
+2023-09-03 07:59:59,053 request for https://steampowered.com status code was 200
+2023-09-03 07:59:59,265 hash of https://steampowered.com: 12288:gMCcFKT6J86Da1zmnMPQ7qXNiO4GDFAnKi/2YaN5m8EhDgFckSDec41h5m1GiDVv:g2HpCa
+2023-09-03 07:59:59,266 sim of hash is 71
+2023-09-03 08:00:00,876 request for https://steampowered.com status code was 200
+2023-09-03 08:00:01,083 hash of https://steampowered.com: 12288:ghCcFKT6J86Da1zmnMPQ7qXNiO4GDFAnKi/2YaN5m8EhDgFckSDec41h5m1GiDVv:gRHpCa
+2023-09-03 08:00:01,084 sim of hash is 71
+2023-09-03 08:00:01,084 loop compleate waiting
